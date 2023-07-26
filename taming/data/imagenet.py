@@ -126,7 +126,7 @@ class ImageNetBase(Dataset):
         self.argen_tokens = torch.load(os.path.join(self.argen_root, "all_outputs.pth")).numpy()
         self.argen_tokens = self.argen_tokens[argenidxs]
 
-        self.arin_tokens = torch.load(os.path.join(self.argen_root, "all_inputs.pth")).numpy() - 50257
+        self.arin_tokens = torch.load(os.path.join(self.argen_root, "all_inputs.pth")).numpy()
         self.arin_tokens = self.arin_tokens[argenidxs]
 
         labels = {
